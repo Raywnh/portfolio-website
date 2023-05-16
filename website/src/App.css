@@ -1,7 +1,11 @@
 * {
   margin: 0;
-  background-color: bisque;
+  background-color: rgb(255, 249, 239);
   box-sizing: border-box;
+}
+.App {
+  display: flex;
+  flex-direction: column;
 }
 
 /* NAVBAR */
@@ -25,11 +29,11 @@ li, a, button {
 
 .no-header {
   transform: translateY(-200%);
-  transition: transform 0.4s ease;
+  transition: transform 0.7s ease-out;
   justify-content: space-between;
   align-items: center;
   height: 10px;
-  padding: 30px 10%;
+  padding: 25px 10%;
   position: fixed;
   display: flex;
 }
@@ -38,9 +42,9 @@ li, a, button {
   justify-content: space-between;
   align-items: center;
   height: 10px;
-  padding: 30px 10%;
+  padding: 25px 10%;
   position: fixed;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease-out;
 }
 
 .nav-links {
@@ -61,9 +65,70 @@ li, a, button {
   opacity: 50%;
 }
 
+/* HOME */
+
+.home {
+  display: flex;
+  margin-top: auto;
+  border: 1px black solid;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+  font-size: 60px;
+  font-family: monospace;
+}
+
 /* ABOUT */
 
 .about {
   display: flex;
   margin-top: auto;
+  border: 1px black solid;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+
+/* EXPERIENCE */
+
+.exp {
+  display: flex;
+  margin-top: auto;
+  border: 1px black solid;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+
+/* PROJECTS */
+
+.projects {
+  display: flex;
+  margin-top: auto;
+  border: 1px black solid;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+
+
+/* CONTACT */
+
+.contact {
+  display: flex;
+  margin-top: auto;
+  border: 1px black solid;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
 }
