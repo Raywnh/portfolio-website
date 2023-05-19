@@ -1,3 +1,3 @@
-# rayhownh-github.io  
+# Personal Website  
   
-Personal Website ~in progress :)
+~in progress :)
