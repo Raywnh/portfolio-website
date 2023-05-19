@@ -30,21 +30,24 @@ li, a, button {
   transition: transform 0.7s ease-out;
   justify-content: space-between;
   align-items: center;
-  height: 5vh;
-  padding: 4vh 10%;
+  height: 0vw;
+  padding: 2vw 10%;
   position: fixed;
   display: flex;
+  width: 100%;
   z-index: 10;
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5vh;
-  padding: 4vh 10%;
+  height: 0vw;
+  padding: 2vw 10%;
   position: fixed;
   transition: transform 0.5s ease-out;
+  width: 100%;
   z-index: 10;
+  opacity: 90%;
 }
 
 .nav-links {
@@ -73,42 +76,42 @@ li, a, button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 30vh;
+  padding-top: 11vw;
   font-family: monospace;
 }
 
 .name {
-  font-size: 3vh;
-  color: crimson;
-  margin-bottom: -5vh;
+  font-size: 1.2vw;
+  color: rgb(253, 129, 129);
+  margin-bottom: -5vw;
 }
 
 .ray {
-  font-size: 10vh;
-  margin-bottom: 3vh;
+  font-size: 7vw;
+  margin-bottom: 3vw;
 }
 
 .typed {
-  font-size: 5vh;
-  width: 130vh;
-  height: 5vh;
+  font-size: 2vw;
+  width: 130vw;
+  height: 5vw;
   text-align: center;
-  margin-bottom: 13vh;
+  margin-bottom: 5vw;
 }
 
 .scroll {
-  font-size: 3vh;
+  font-size: 1vw;
   text-align: center;
-  border: 0.3vh solid crimson;
-  border-radius: 1vh;
-  padding: 2vh;
-  margin-bottom: 50vh;
-  color: crimson;
+  border: 0.15vw solid rgb(255, 126, 126);
+  border-radius: 1vw;
+  padding: 1vw;
+  margin-bottom: 25vw;
+  color: rgb(255, 126, 126);
   transition: all 0.3s ease-out;
 }
 
 .scroll:hover {
-  opacity: 50%;
+  opacity: 75%;
   background-color: rgb(236, 173, 173);
   cursor: pointer;
 }
@@ -120,26 +123,104 @@ li, a, button {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 15vh;
+  padding-top: 0vw;
+  margin-top: -10vw;
+  padding-bottom: 1vw;
   font-family: monospace;
   background-color: #7e9278;
-  height: 100vh;
   z-index: 9;
 }
 
 .image-placeholder {
-  border: rgb(255, 255, 255) 30vh solid;
-  border-radius: 50vh;
-  margin: 23vh;
-  padding: 3vh;
+  padding: 11vw;
+  border: rgb(252, 242, 226) 0.2vw solid;
+  border-radius: 50vw;
+  margin: 10vw;
+  margin-top: 5vw;
+  margin-right: 5vw;
+  background-color: transparent;
 }
 
 .text {
+  display: flex;
+  flex-direction: column;
   background-color: transparent;
-  padding: 30vh;
-  border: black 1vh solid;
+  padding: 0vw;
+  margin: 10vw;
+  align-items: flex-start;
+  margin-bottom: 12vw;
+  margin-top: 4vw;
 }
 
 .text h1 {
   background-color: transparent;
+  font-size: 4vw;
+  color: rgb(252, 242, 226)
+}
+
+.line {
+  background-color: transparent;
+  margin-top: -3vw;
+  padding-bottom: 5vw;
+  color: rgb(252, 226, 226);
+  font-size: 1vw;
+  margin-bottom: -2vw;
+}
+.second {
+  color: black;
+}
+
+.text h2 {
+  margin-top: -1vw;
+  background-color: transparent;
+  font-size: 0.8vw;
+  padding-bottom: 2vw;
+  color: rgb(252, 242, 226);
+  line-height: 2;
+  font-weight: 100;
+}
+
+.text a {
+  background-color: transparent;
+  font-size: 0.8vw;
+  color: rgb(252, 242, 226);
+  transition: all 0.3s ease 0s
+}
+.text a:hover {
+  opacity: 75%;
+  color: rgb(255, 80, 80);
+}
+
+.technologies {
+  margin-top: 1vw;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.technologies h2 {
+  color: black;
+  font-weight: bold;
+  font-size: 1vw;
+  margin-bottom: -2vw;
+}
+
+.list-container ul, li {
+  background-color: transparent;
+}
+
+/* EXPERIENCE */
+
+.experience {
+  background-color: rgb(252, 242, 226);
+  margin-top: 10vh;
 }
