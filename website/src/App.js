@@ -1,7 +1,7 @@
 import logo from './assets/logo.png'
 import './App.css';
 import { useEffect, useState } from 'react'
-import TypeWriter from 'typewriter-effect'
+import { Typewriter } from 'react-simple-typewriter'
 
 function App() {
 
@@ -30,23 +30,28 @@ function App() {
         </ul>
       </div>
       <div className="home">
-        <div className="name">
-          <TypeWriter onInit={(typewriter) => {
-            typewriter.typeString("I LOVE YOU").pauseFor(1000).start()
-          }}/>
+        <div className='name'>Hello, i am</div>
+        <h2 className='ray'>RAY HO</h2>
+        <div className="typed">
+          <Typewriter
+            words={['COMPUTER ENGINEERING STUDENT', 'SOFTWARE ENGINEER', 'BREAK DANCER', 'MR. WORLDWIDE']}
+            loop={Infinity}
+            deleteSpeed={50}
+            typeSpeed={70}
+            cursor={true}
+            cursorStyle='|'
+            cursorColor='crimson'
+          />
         </div>
+        <button className='scroll'>scroll down ↓</button>
       </div>
-      <div className="about">
-        ABOUT
-      </div>
-      <div className="exp">
-        EXPERIENCE
-      </div>  
-      <div className="projects">
-        PROJECTS
-      </div>
-      <div className="contact">
-        CONTACT
+      <div className='about'>
+        <div className='image-placeholder'>
+          
+        </div>
+        <div className='text'>
+          <h1>PLACEHOLDER</h1>
+        </div>
       </div>
     </div>
   );
