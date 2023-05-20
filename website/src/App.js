@@ -59,27 +59,22 @@ function App() {
           I'm open to any tech internship roles starting in Spring 2024 and Summer 2024!
           </h2>
           <div className='technologies'>
-            <h2>Technologies</h2>
+            <h2>Technologies—</h2>
             <div className="list-container">
               <ul>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>Python</li>
               </ul>
               <ul>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
-                <li>Stuff</li>
+              <li>React</li>
+              <li>Node</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+              <li>JUnit</li>
               </ul>
             </div>
           </div>
