@@ -184,7 +184,8 @@ li, a, button {
   background-color: transparent;
   font-size: 0.8vw;
   color: rgb(252, 242, 226);
-  transition: all 0.3s ease 0s
+  transition: all 0.3s ease 0s;
+  text-decoration-line: underline; 
 }
 .text a:hover {
   opacity: 75%;
@@ -196,28 +197,52 @@ li, a, button {
   background-color: transparent;
   display: flex;
   flex-direction: column;
-}
-
-.list-container {
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  border: 1px solid black;
   justify-content: left;
-  align-items: flex-start;
+  align-items: left;
 }
 
 .technologies h2 {
-  color: black;
+  color: rgb(56, 56, 56);
   font-weight: bold;
-  font-size: 1vw;
+  font-size: 1.2vw;
   margin-bottom: -2vw;
 }
 
-.list-container ul, li {
+.list-container {
+  margin-top: 1vw;
   background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  font-family: monospace;
 }
 
+.list-container ul {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.list-container ul, li {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  margin-right: 1vw;
+}
+
+.list-container li {
+  list-style-position: outside;
+  list-style: none;
+  font-size: 0.6vw;
+  margin-bottom: 1vw;
+  font-weight: 1000;
+}
+
+.list-container li:before {
+  content: url(./assets/arrow.svg);
+  display: inline-block;
+  color: rgb(70, 70, 70);
+  width: 1vw;
+}
 /* EXPERIENCE */
 
 .experience {
