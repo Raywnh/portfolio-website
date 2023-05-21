@@ -8,7 +8,6 @@ import { Typewriter } from 'react-simple-typewriter'
 function App() {
 
   const [sticky, setSticky] = useState(false)
-  const [display, setDisplay]= useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -121,15 +120,28 @@ function App() {
           </div>
           <div className='projects-container'>
               <div className='row-one'>
-                <img className='image' src={spasm} onMouseEnter={() => setDisplay(true)} onMouseLeave={() => setDisplay(false)}>
-                </img>
-                <img className='image' src={spasm}></img> 
-
+                <div className='image-container'>
+                  <img className='image' src={spasm}>
+                  </img>
+                   <p className='overlay'>A video streaming platform that comes with facial recognition and allows you to remote control a car powered by a Raspberry PI</p>
+                </div>
+                <div className='image-container'>
+                  <img className='image' src={spasm}>
+                  </img>
+                  <p className='overlay'>A video streaming platform that comes with facial recognition and allows you to remote control a car powered by a Raspberry PI</p>             
+                </div>
               </div>
               <div className='row-two'>
-                <img className='image' src={spasm}></img>
-                <img className='image' src={spasm}></img>
-
+                <div className='image-container'>
+                <img className='image' src={spasm}>
+                  </img>
+                  <p className='overlay'>A video streaming platform that integrates facial recognition and allows you to remotely control a Raspberry PI powered car</p>            
+                </div>
+                <div className='image-container'>
+                <img className='image' src={spasm}>
+                  </img>
+                  <p className='overlay'>A video streaming platform that comes with facial recognition and allows you to remote control a car powered by a Raspberry PI</p>              
+                </div>
               </div>
           </div>
       </div>
