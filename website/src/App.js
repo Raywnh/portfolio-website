@@ -1,11 +1,14 @@
 import logo from './assets/logo.png'
 import './App.css';
+// import './experience.css'
+import spasm from './assets/spasm.png'
 import { useEffect, useState } from 'react'
 import { Typewriter } from 'react-simple-typewriter'
 
 function App() {
 
   const [sticky, setSticky] = useState(false)
+  const [display, setDisplay]= useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,27 +64,74 @@ function App() {
           <div className='technologies'>
             <h2>Technologies—</h2>
             <div className="list-container">
-              <ul>
+              {/* <ul>
                 <li>TypeScript</li>
                 <li>JavaScript</li>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Java</li>
-                <li>Python</li>
               </ul>
               <ul>
+              <li>Python</li>
               <li>React</li>
               <li>Node</li>
               <li>Express</li>
               <li>MongoDB</li>
-              <li>JUnit</li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
       </div>
       <div className='experience'>
+        <div className="experience-title">
+          <h1>EXPERIENCE</h1>
+          <div className='line-two'>__________________________________________________________</div>
+        </div>
+        <div className='experience-container'>
+          <div>
+            <h4><a>ALIDA</a></h4>
+            <h2>Software Engineer Intern</h2>
+            <h3>May 2023 - Present</h3>
+            <p>Working on platform microservices with TypeScript and Node!</p>
+          </div>
+          <div>
+            <h4><a>UBC BIONICS</a></h4>
+            <h2>Embedded Software Developer </h2>
+            <h3>Sep 2022 - Apr 2023</h3>
+            <p>As a software developer at UBC Bionics, I worked in a team of 40 engineering students on a bionic arm. My main role was writing code that parses raw electrical
+              signals from EMG sensors and a polling system for grip optimization in Python.
+            </p>
+          </div>
+          <div>
+            <h4><a>CITY UNIVERSITY OF HONG KONG</a></h4>
+            <h2>Software Developer</h2>
+            <h3>July 2022</h3>
+            <p>
+              In this role, I was tasked with building an automated data system in Google Sheets to eliminate the amount of manual work administrative staff had to perform when
+              data keeping. I was able to automate 90% of actions involving data organization with JavaScript programs that run at daily and weekly intervals in Google Apps Scripts, successfuly
+              delivering a product that exceeded my stakeholders' expectations.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className='projects'>
+          <div className='projects-title'>
+            <h1>PROJECTS</h1>
+            <div className='line-three'>_____________________________</div>
+          </div>
+          <div className='projects-container'>
+              <div className='row-one'>
+                <img className='image' src={spasm} onMouseEnter={() => setDisplay(true)} onMouseLeave={() => setDisplay(false)}>
+                </img>
+                <img className='image' src={spasm}></img> 
 
+              </div>
+              <div className='row-two'>
+                <img className='image' src={spasm}></img>
+                <img className='image' src={spasm}></img>
+
+              </div>
+          </div>
       </div>
     </div>
   );
