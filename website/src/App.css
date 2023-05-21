@@ -370,19 +370,60 @@ li, a, button {
   background-color: transparent;
   display: flex;
   justify-content: space-around;
-  margin: 2vw;
-}
-.image {
-  border: solid 1.5vw rgb(255, 255, 255);
-  border-radius: 5%;
-  width: 25vw;
-  transition: 0.2s ease-in;
+  margin: 7vw; 
+  margin-inline: 10vw;
+  margin-bottom: 4vw;
 }
 
-.projects-container img:hover {
-  opacity: 50%;
+.image-container {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.image-container img  {
+  border: solid 1.5vw rgb(255, 255, 255);
+  border-radius: 5%;
+  width: 20vw;
+  transition: 0.2s ease-in;
+  position: absolute;
+  z-index: 2;
+}
+
+.image-container:hover .image {
+  opacity: 0.25;
   cursor: pointer;
   box-shadow: 1vw 1vw 1vw;
   transition: 0.2s ease-in;
+  position: absolute;
+  z-index: 0;
+}
+
+.image-container:hover .overlay {
+  position: absolute;
+  font-size: 1vw;
+  font-weight: 100;
+  font-family: 'Calluna', sans-serif;
+  transition: 0.5s ease-out;
+  z-index: 1;
+  opacity: 1;
+  background-color: transparent;
+  color: white;
+  width: 10vw;
+}
+
+.overlay  {
+  position: absolute;
+  font-size: 1vw;
+  font-weight: 100;
+  font-family: 'Calluna', sans-serif;
+  transition: 0.5s ease-out;
+  z-index: 0;
+  opacity: 0;
+  background-color: transparent;
+  color: white;
+  width: 10vw;
 }
 
