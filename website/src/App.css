@@ -2,6 +2,10 @@
   background-color: rgb(252, 242, 226);
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Calluna';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/CallunaSansRegular.otf') format('opentype');
+}
 .App {
   margin: 0;
   overflow: hidden;
@@ -126,7 +130,7 @@ li, a, button {
   padding-top: 0vw;
   margin-top: -10vw;
   padding-bottom: 1vw;
-  font-family: monospace;
+  font-family: Calluna, Arial, sans-serif;
   background-color: #7e9278;
   z-index: 9;
 }
@@ -166,14 +170,11 @@ li, a, button {
   font-size: 1vw;
   margin-bottom: -2vw;
 }
-.second {
-  color: black;
-}
 
 .text h2 {
   margin-top: -1vw;
   background-color: transparent;
-  font-size: 0.8vw;
+  font-size: 0.85vw;
   padding-bottom: 2vw;
   color: rgb(252, 242, 226);
   line-height: 2;
@@ -204,7 +205,7 @@ li, a, button {
 .technologies h2 {
   color: rgb(56, 56, 56);
   font-weight: bold;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   margin-bottom: -2vw;
 }
 
@@ -218,7 +219,7 @@ li, a, button {
   font-family: monospace;
 }
 
-.list-container ul {
+/* .list-container ul {
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -242,10 +243,146 @@ li, a, button {
   display: inline-block;
   color: rgb(70, 70, 70);
   width: 1vw;
-}
+} */
 /* EXPERIENCE */
 
 .experience {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 15vw;
+  font-family: monospace;
   background-color: rgb(252, 242, 226);
-  margin-top: 10vh;
+  padding-bottom: 6vw;
 }
+
+.experience-title {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-left: -5vw;
+}
+.experience h1 {
+  margin-top: -10vw;
+  font-size: 4vw;
+  margin-bottom: -0.5vw;
+}
+
+.line-two {
+  font-size: 1vw;
+  margin: 0;
+  color: rgb(0, 0, 0);
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  align-items: start;
+  border-left: 0.1vw solid rgb(0, 0, 0);
+  height: fit-content;
+  margin-left: 15vw;
+  margin-top: 2vw;
+}
+
+.experience-container div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+  font-family: Calluna, Arial, sans-serif;
+  width: 35vw;
+}
+
+.experience-container h2 {
+  font-size: 1.1vw;
+  margin-top: 0;
+}
+.experience-container a {
+  font-weight: 1000;
+  color: rgb(197, 158, 98);
+  background-color: transparent;
+  font-size: 2.5vw;
+  transition: all 0.3s ease 0s;
+}
+
+.experience-container a:hover {
+  opacity: 50%;
+  color: rgb(197, 158, 98);
+  cursor: pointer;
+  text-decoration-line: underline;
+  
+}
+
+.experience-container h3 {
+  margin-top: -0.5vw;
+  font-size: 0.7vw;
+  color: rgb(197, 158, 98);
+}
+
+.experience-container p {
+  margin-top: 0.5vw;
+  font-size: 0.8vw;
+  font-weight: 100;
+  color: rgb(129, 129, 129);
+} 
+
+/* PROJECTS */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 15vw;
+  background-color: rgb(54, 54, 54);
+}
+
+.projects-title {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-left: auto;
+  background-color: transparent;
+  color: white;
+}
+
+.projects-title h1 {
+  margin-top: -10vw;
+  font-size: 4vw;
+  margin-bottom: -0.5vw;
+  background-color: transparent;
+}
+
+.line-three {
+  font-size: 1vw;
+  margin: 0;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+}
+
+.projects-container {
+  margin-top: 0vw;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.projects-container div {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  margin: 2vw;
+}
+.image {
+  border: solid 1.5vw rgb(255, 255, 255);
+  border-radius: 5%;
+  width: 25vw;
+  transition: 0.2s ease-in;
+}
+
+.projects-container img:hover {
+  opacity: 50%;
+  cursor: pointer;
+  box-shadow: 1vw 1vw 1vw;
+  transition: 0.2s ease-in;
+}
+
