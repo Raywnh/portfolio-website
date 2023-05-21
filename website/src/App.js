@@ -1,6 +1,15 @@
 import logo from './assets/logo.png'
-import './App.css';
-// import './experience.css'
+import './css/App.css';
+import './css/experience.css'
+import './css/projects.css'
+import './css/about.css'
+import './css/contact.css'
+import './css/home.css'
+import './index.css'
+import ray from './assets/ray.jpg'
+import imguessr from './assets/imguessr.jpg'
+import unity from './assets/unity.png'
+import budgetingApp from './assets/budgeting-app.jpg'
 import spasm from './assets/spasm.png'
 import { useEffect, useState } from 'react'
 import { Typewriter } from 'react-simple-typewriter'
@@ -48,9 +57,7 @@ function App() {
         <button className='scroll'>scroll down ↓</button>
       </div>
       <div className='about'>
-        <div className='image-placeholder'>
-
-        </div>
+        <img src={ray}></img>
         <div className='text'>
           <h1>ABOUT</h1>
           <div className="line">__________________________________________</div>
@@ -119,31 +126,45 @@ function App() {
             <div className='line-three'>_____________________________</div>
           </div>
           <div className='projects-container'>
-              <div className='row-one'>
-                <div className='image-container'>
-                  <img className='image' src={spasm}>
-                  </img>
-                   <p className='overlay'>A video streaming platform that comes with facial recognition and allows you to remote control a car powered by a Raspberry PI</p>
-                </div>
-                <div className='image-container'>
-                  <img className='image' src={spasm}>
-                  </img>
-                  <p className='overlay'>A video streaming platform that comes with facial recognition and allows you to remote control a car powered by a Raspberry PI</p>             
-                </div>
+              <div className='row'>
+                  <div className='image-container' onClick={() => {window.open('https://github.com/Raywnh/Vehicle-Streaming-Platform')}}>
+                    <h2 className='project-name'>SPASM.TV</h2>
+                    <img className='image' src={spasm}>
+                    </img>
+                    <p className='overlay'>A video streaming platform that comes with facial recognition and allows you to remote control a car powered by a Raspberry PI</p>
+                  </div>
+                  <div className='image-container' onClick={() => {window.open('https://github.com/Raywnh/imguessr.io')}}>
+                    <h2 className='project-name'>IMGUESSR.IO</h2>
+                    <img className='image' src={imguessr}>
+                    </img>
+                    <p className='overlay'>An image guessing game powered by AI generated art built with OpenAI's DALL-E model</p>
+                  </div>
               </div>
-              <div className='row-two'>
-                <div className='image-container'>
-                <img className='image' src={spasm}>
-                  </img>
-                  <p className='overlay'>A video streaming platform that integrates facial recognition and allows you to remotely control a Raspberry PI powered car</p>            
-                </div>
-                <div className='image-container'>
-                <img className='image' src={spasm}>
-                  </img>
-                  <p className='overlay'>A video streaming platform that comes with facial recognition and allows you to remote control a car powered by a Raspberry PI</p>              
-                </div>
+              <div className='row'>
+                  <div className='image-container' onClick={() => {window.open('https://github.com/Raywnh/budgeting-app')}}>
+                    <h2 className='project-name'>BUDGETING APP</h2>
+                    <img className='image' src={budgetingApp}>
+                    </img>
+                    <p className='overlay'>A fullstack budgeting web application created with the MERN stack and Firebase for authentication</p>
+                  </div>
+                  <div className='image-container' onClick={() => {window.open('https://github.com/Raywnh/Unity-Dodging-Game')}}>
+                    <h2 className='project-name'>UNITY GAME</h2>
+                    <img className='image' src={unity}>
+                    </img>
+                    <p className='overlay'>A simple dodging video game made with Unity that increases in difficulty as time goes on</p>
+                  </div>
               </div>
           </div>
+      </div>
+      <div className='contact'>
+        <h1>CONTACT</h1>
+        <div className='line-four'>______________________________________</div>
+        <ul>
+          <li><a>LINKEDIN</a></li>
+          <li><a>GITHUB</a></li>
+          <li><a>EMAIL</a></li>
+          <li><a>RESUME</a></li>
+        </ul>
       </div>
     </div>
   );

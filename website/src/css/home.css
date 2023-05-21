@@ -1,0 +1,45 @@
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 11vw;
+    font-family: monospace;
+  }
+  
+  .name {
+    font-size: 1.2vw;
+    color: rgb(253, 129, 129);
+    margin-bottom: -5vw;
+  }
+  
+  .ray {
+    font-size: 7vw;
+    margin-bottom: 3vw;
+  }
+  
+  .typed {
+    font-size: 2vw;
+    width: 130vw;
+    height: 5vw;
+    text-align: center;
+    margin-bottom: 5vw;
+  }
+  
+  .scroll {
+    font-size: 1vw;
+    text-align: center;
+    border: 0.15vw solid rgb(255, 126, 126);
+    border-radius: 1vw;
+    padding: 1vw;
+    margin-bottom: 25vw;
+    color: rgb(255, 126, 126);
+    transition: all 0.3s ease-out;
+  }
+  
+  .scroll:hover {
+    opacity: 75%;
+    background-color: rgb(236, 173, 173);
+    cursor: pointer;
+  }
