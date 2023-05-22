@@ -18,7 +18,7 @@
   
   .projects-title h1 {
     margin-top: -10vw;
-    font-size: 4vw;
+    font-size: 5vw;
     margin-bottom: -0.5vw;
     background-color: transparent;
   }
@@ -103,6 +103,7 @@
     background-color: transparent;
     color: white;
     width: 10vw;
+    cursor: pointer;
   }
   
   .overlay  {

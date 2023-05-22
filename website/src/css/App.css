@@ -12,10 +12,10 @@
 }
 
 /* NAVBAR */
-li, a, button {
+li, .links {
   font-family: 'Calluna', sans-serif;
   font-weight: 500;
-  font-size: 0.7vw;
+  font-size: 0.8vw;
   color: black;
   text-decoration: none;
   background-color: transparent;
@@ -57,7 +57,7 @@ li, a, button {
   transition: transform 0.7s ease-out;
   width: 100%;  
   z-index: 10;
-  opacity: 90%;
+  opacity: 75%;
 }
 
 .nav-links {
@@ -68,15 +68,16 @@ li, a, button {
 
 .nav-links li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0vw 1vw;
 }
 
-.nav-links li a {
+.links {
   transition: all 0.3s ease 0s;
   background-color: transparent;
 }
 
-.nav-links li a:hover {
+.links:hover {
   opacity: 25%;
   background-color: transparent;
+  cursor: pointer;
 }

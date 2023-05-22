@@ -6,18 +6,28 @@ import './css/about.css'
 import './css/contact.css'
 import './css/home.css'
 import './index.css'
+import resume from './assets/resume.pdf'
 import ray from './assets/ray.jpg'
 import imguessr from './assets/imguessr.jpg'
 import unity from './assets/unity.png'
 import budgetingApp from './assets/budgeting-app.jpg'
 import spasm from './assets/spasm.png'
+import ts from './assets/ts.png'
+import web from './assets/web.png'
+import python from './assets/python.png'
+import react from './assets/react.png'
+import express from './assets/express.png'
+import java from './assets/java.png'
+import node from './assets/node.png'
+import mongo from './assets/mongo.png'
 import { useEffect, useState } from 'react'
 import { Typewriter } from 'react-simple-typewriter'
+import { Link, animateScroll} from 'react-scroll'
 
 function App() {
 
   const [sticky, setSticky] = useState(false)
-
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100)
@@ -32,15 +42,16 @@ function App() {
   return (
     <div className="App">
       <div className={sticky? "header" : "no-header"}>
-        <img className="logo" src={logo} alt="logo"></img>
+        <img className="logo" src={logo} alt="logo" onClick={() => animateScroll.scrollToTop()}></img>
         <ul className="nav-links">
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">EXPERIENCE</a></li>
-          <li><a href="#">PROJECTS</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><Link className='links' to="about" spy={true} smooth={true} offset={20} duration={700}>ABOUT</Link></li>
+          <li><Link className='links' to="experience" spy={true} smooth={true} offset={20} duration={700}>EXPERIENCE</Link></li>
+          <li><Link className='links' to="projects" spy={true} smooth={true} offset={20} duration={700}>PROJECTS</Link></li>
+          <li><Link className='links' to="contact" spy={true} smooth={true} offset={20} duration={700}>CONTACT</Link></li>
         </ul>
       </div>
       <div className="home">
+        <div className='home-container'>  
         <div className='name'>Hello world, i am</div>
         <h2 className='ray'>RAY HO</h2>
         <div className="typed">
@@ -54,7 +65,8 @@ function App() {
             cursorColor='crimson'
           />
         </div>
-        <button className='scroll'>scroll down ↓</button>
+        </div>
+        <Link className='scroll' to="about" spy={true} smooth={true} offset={20} duration={700}>scroll down ↓</Link>
       </div>
       <div className='about'>
         <img src={ray}></img>
@@ -68,22 +80,41 @@ function App() {
           I'm open to any tech internship roles starting in Spring 2024 and Summer 2024!
           </h2>
           <div className='technologies'>
-            <h2>Technologies—</h2>
+            <h2>Technologies</h2>
+            <h4>_______</h4>
             <div className="list-container">
-              {/* <ul>
-                <li>TypeScript</li>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Java</li>
-              </ul>
-              <ul>
-              <li>Python</li>
-              <li>React</li>
-              <li>Node</li>
-              <li>Express</li>
-              <li>MongoDB</li>
-              </ul> */}
+              <div>
+                <img src={web}></img>
+                <h3>Web Dev</h3>
+              </div>
+              <div>
+                <img src={ts}></img>
+                <h3>TypeScript</h3>
+              </div>
+              <div>
+                <img src={python}></img>
+                <h3>Python</h3>
+              </div>
+              <div>
+                <img src={java}></img>
+                <h3>Java</h3>
+              </div>
+              <div>
+                <img src={node}></img>
+                <h3>Node</h3>
+              </div>
+              <div>
+                <img src={express}></img>
+                <h3>Express.js</h3>
+              </div>
+              <div>
+                <img src={react}></img>
+                <h3>React</h3>
+              </div>
+              <div>
+                <img src={mongo}></img>
+                <h3>MongoDB</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -95,13 +126,13 @@ function App() {
         </div>
         <div className='experience-container'>
           <div>
-            <h4><a>ALIDA</a></h4>
+            <h4><a href="https://www.alida.com/">ALIDA</a></h4>
             <h2>Software Engineer Intern</h2>
             <h3>May 2023 - Present</h3>
             <p>Working on platform microservices with TypeScript and Node!</p>
           </div>
           <div>
-            <h4><a>UBC BIONICS</a></h4>
+            <h4><a href="https://github.com/BEARUBC">UBC BIONICS</a></h4>
             <h2>Embedded Software Developer </h2>
             <h3>Sep 2022 - Apr 2023</h3>
             <p>As a software developer at UBC Bionics, I worked in a team of 40 engineering students on a bionic arm. My main role was writing code that parses raw electrical
@@ -109,7 +140,7 @@ function App() {
             </p>
           </div>
           <div>
-            <h4><a>CITY UNIVERSITY OF HONG KONG</a></h4>
+            <h4><a href="https://www.cityu.edu.hk/">CITY UNIVERSITY OF HONG KONG</a></h4>
             <h2>Software Developer</h2>
             <h3>July 2022</h3>
             <p>
@@ -160,10 +191,10 @@ function App() {
         <h1>CONTACT</h1>
         <div className='line-four'>______________________________________</div>
         <ul>
-          <li><a>LINKEDIN</a></li>
-          <li><a>GITHUB</a></li>
-          <li><a>EMAIL</a></li>
-          <li><a>RESUME</a></li>
+          <li><a href="https://www.linkedin.com/in/ray-ho-wnh/">LINKEDIN</a></li>
+          <li><a href="https://github.com/Raywnh">GITHUB</a></li>
+          <li><a href="mailto:rayhownh@gmail.com">EMAIL</a></li>
+          <li><a href={resume} download>RESUME</a></li>
         </ul>
       </div>
     </div>
