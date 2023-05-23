@@ -13,7 +13,7 @@
   
   .about img {
     margin: 9vw;
-    margin-top: -10vw;
+    margin-top: -7.5vw;
     margin-right: 0vw;
     width: 25%;
     height: 23vw;
@@ -124,6 +124,6 @@
     font-size: 1vw;
     background-color: transparent;
     margin: 0;
-    margin-top: -1.5vw;
+    margin-top: -2.5vw;
     color: rgb(255, 255, 255)
   }
