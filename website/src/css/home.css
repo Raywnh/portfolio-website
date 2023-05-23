@@ -7,14 +7,57 @@
     font-family: monospace;
   }
   .home-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 11vw;
     font-family: monospace;
+    /* border: 1vw black solid; */
+    width: 50%;
+  }
+
+  .home-container:after {
+    content: "";
+    background: rgb(253, 129, 129);
+    position: absolute;
+    top: 30%;
+    left: 0;
+    height: 20%;
+    width: 1vw;
   }
   
+  .right-corner {
+    content: "";
+    background: rgb(253, 129, 129);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 20%;
+    width: 1vw;
+  }
+
+  .top-left {
+    content: "";
+    background: rgb(253, 129, 129);
+    position: absolute;
+    top: 30%;
+    left: 0;
+    height: 3%;
+    width: 15%;
+    
+  }
+
+  .bottom-right {
+    content: "";
+    background: rgb(253, 129, 129);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 3%;
+    width: 15%;
+  }
   .name {
     font-size: 1.2vw;
     color: rgb(253, 129, 129);
@@ -40,6 +83,7 @@
     border: 0.15vw solid rgb(255, 126, 126);
     border-radius: 1vw;
     padding: 1vw;
+    margin-top: 8vw;
     margin-bottom: 25vw;
     color: rgb(255, 126, 126);
     transition: all 0.3s ease-out;

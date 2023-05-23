@@ -13,7 +13,7 @@
   
   .about img {
     margin: 9vw;
-    margin-top: -5vw;
+    margin-top: -10vw;
     margin-right: 0vw;
     width: 25%;
     height: 23vw;
@@ -26,14 +26,15 @@
     padding: 0vw;
     margin: 10vw;
     align-items: flex-start;
-    margin-bottom: 8vw;
+    margin-bottom: 15vw;
     margin-top: 4vw;
   }
   
   .text h1 {
     background-color: transparent;
     font-size: 5vw;
-    color: rgb(252, 242, 226)
+    color: rgb(252, 242, 226);
+    margin-bottom: 2.5vw;
   }
   
   .line {
@@ -85,14 +86,12 @@
     padding-bottom: 0.5vw;
   }
   
-  .technologies h4 {
-    color: rgb(252, 242, 226);
-    font-weight: bold;
-    font-size: 1.5vw;
-    margin: 0;
-
-    padding: 0;
+  .line-2 {
     background-color: transparent;
+    padding: 0;
+    color: rgb(252, 226, 226);
+    font-size: 1vw;
+    margin-top: 0.5vw;
   }
   .list-container {
     margin-top: 0vw;
@@ -102,7 +101,7 @@
     align-items: flex-start;
     font-family: monospace;
     flex-wrap: wrap;
-    margin-right: 12vw;
+    margin-right: 5vw;
   }
 
   .list-container div {
@@ -118,7 +117,7 @@
     width:4vw;
     height:4vw;
     object-fit: scale-down;
-    margin: 2vw;
+    margin: 3vw;
   }
 
   .list-container h3 {

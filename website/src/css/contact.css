@@ -6,28 +6,41 @@
     font-family: monospace;
     background-color: rgb(252, 242, 226);
     padding-bottom: 10vw;
+    margin-bottom: 10vw;
 }
 
 .contact h1 {
     margin-top: -10vw;
     font-size: 5vw;
+    padding: 0;
+    margin: 0;
     margin-bottom: -0.5vw;
     color: rgb(255, 153, 153);
 }
 
-.contact line-four {
+.line-four {
     font-size: 1vw;
     margin: 0;
+    padding: 0;
     color: rgb(0, 0, 0);
 }
 
 .contact ul {
     margin-top: 5vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    border-left: 0.5vw solid rgb(255, 153, 153);
+    border-right: 0.5vw solid rgb(255, 153, 153);
+    position: relative;
 }
+
 .contact li{
     display: inline;
-    margin: 1vw;
+    margin: 3vw;
 }
+
 
 .contact a {
     font-size: 2vw;

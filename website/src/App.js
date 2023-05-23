@@ -52,6 +52,9 @@ function App() {
       </div>
       <div className="home">
         <div className='home-container'>  
+        <div className='right-corner'></div>
+        <div className='top-left'></div>
+        <div className='bottom-right'></div>
         <div className='name'>Hello world, i am</div>
         <h2 className='ray'>RAY HO</h2>
         <div className="typed">
@@ -81,7 +84,7 @@ function App() {
           </h2>
           <div className='technologies'>
             <h2>Technologies</h2>
-            <h4>_______</h4>
+            <div className="line-2">_______________</div>
             <div className="list-container">
               <div>
                 <img src={web}></img>
@@ -189,13 +192,13 @@ function App() {
       </div>
       <div className='contact'>
         <h1>CONTACT</h1>
-        <div className='line-four'>______________________________________</div>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/ray-ho-wnh/">LINKEDIN</a></li>
-          <li><a href="https://github.com/Raywnh">GITHUB</a></li>
-          <li><a href="mailto:rayhownh@gmail.com">EMAIL</a></li>
-          <li><a href={resume} download>RESUME</a></li>
-        </ul>
+        <h2 className='line-four'>______________________________________</h2>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/ray-ho-wnh/">LINKEDIN</a></li>
+            <li><a href="https://github.com/Raywnh">GITHUB</a></li>
+            <li><a href="mailto:rayhownh@gmail.com">EMAIL</a></li>
+            <li><a href={resume} download>RESUME</a></li>
+          </ul>
       </div>
     </div>
   );
