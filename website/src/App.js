@@ -67,38 +67,38 @@ function App() {
             className='bottom-left'
             initial={{opacity: 0, y: 200}}
             animate={{opacity: 1, y: 0}}
-            transition={{duration: 1}}>
+            transition={{duration: 1, delay: 0.5}}>
           </motion.div>
           <motion.div 
             className='right-corner'
             initial={{opacity: 0, y: -200}}
             animate={{opacity: 1, y: 0}}
-            transition={{duration: 1}}>
+            transition={{duration: 1, delay: 0.5}}>
           </motion.div>
           <motion.div 
             className='top-left'
             initial={{opacity: 0, x: 200}}
             animate={{opacity: 1, x: 0}}
-            transition={{duration: 1}}>
+            transition={{duration: 1, delay: 0.5}}>
           </motion.div>
           <motion.div 
             className='bottom-right'
             initial={{opacity: 0, x: -200}}
             animate={{opacity: 1, x: 0}}
-            transition={{duration: 1}}>  
+            transition={{duration: 1, delay: 0.5}}>  
           </motion.div>
           <motion.div 
             className='name'
             initial={{opacity: 0, y: -100}}
             animate={{opacity: 1, y: 0}}
-            transition={{duration: 1.5}}>
+            transition={{duration: 1.5, delay: 0.5}}>
             Hello world, i am
           </motion.div>
           <motion.h2 
             className='ray'
             initial={{opacity: 0, x: -100}}
             animate={{opacity: 1, x: 0}}
-            transition={{duration: 1.5}}>
+            transition={{duration: 1.5, delay: 0.5}}>
             RAY HO
           </motion.h2>
           <div className="typed">
@@ -117,7 +117,7 @@ function App() {
             className='scroll-div'
             initial={{opacity: 0, y: 150}}
             animate={{opacity: 1, y: 0}}
-            transition={{duration: 1.5}}>
+            transition={{duration: 1.5, delay: 0.5}}>
             <Link className='scroll' to="about" spy={true} smooth={true} offset={20} duration={700}>scroll down ↓</Link>
         </motion.h5>
       </div>
