@@ -20,14 +20,19 @@ import express from './assets/express.png'
 import java from './assets/java.png'
 import node from './assets/node.png'
 import mongo from './assets/mongo.png'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Typewriter } from 'react-simple-typewriter'
 import { Link, animateScroll} from 'react-scroll'
+import { motion, useAnimation, useInView } from 'framer-motion'
 
 function App() {
-
+ 
+  const ref = useRef(null)
   const [sticky, setSticky] = useState(false)
-  
+  const isInView = useInView[ref, {once: true}]
+ 
+  const mainControls = useAnimation()
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100)
@@ -38,6 +43,12 @@ function App() {
     }
     window.addEventListener('scroll', handleScroll);
   },[])
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  },[isInView])
   
   return (
     <div className="App">
@@ -50,47 +61,125 @@ function App() {
           <li><Link className='links' to="contact" spy={true} smooth={true} offset={20} duration={700}>CONTACT</Link></li>
         </ul>
       </div>
-      <div className="home">
+      <div className="home" >
         <div className='home-container'>  
-        <div className='right-corner'></div>
-        <div className='top-left'></div>
-        <div className='bottom-right'></div>
-        <div className='name'>Hello world, i am</div>
-        <h2 className='ray'>RAY HO</h2>
-        <div className="typed">
-          <Typewriter
-            words={['COMPUTER ENGINEERING STUDENT', 'SOFTWARE ENGINEER', 'BREAK DANCER', 'MR. WORLDWIDE']}
-            loop={Infinity}
-            deleteSpeed={50}
-            typeSpeed={70}
-            cursor={true}
-            cursorStyle='|'
-            cursorColor='crimson'
-          />
+          <motion.div
+            className='bottom-left'
+            initial={{opacity: 0, y: 200}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 1}}>
+          </motion.div>
+          <motion.div 
+            className='right-corner'
+            initial={{opacity: 0, y: -200}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 1}}>
+          </motion.div>
+          <motion.div 
+            className='top-left'
+            initial={{opacity: 0, x: 200}}
+            animate={{opacity: 1, x: 0}}
+            transition={{duration: 1}}>
+          </motion.div>
+          <motion.div 
+            className='bottom-right'
+            initial={{opacity: 0, x: -200}}
+            animate={{opacity: 1, x: 0}}
+            transition={{duration: 1}}>  
+          </motion.div>
+          <motion.div 
+            className='name'
+            initial={{opacity: 0, y: -100}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 1.5}}>
+            Hello world, i am
+          </motion.div>
+          <motion.h2 
+            className='ray'
+            initial={{opacity: 0, x: -100}}
+            animate={{opacity: 1, x: 0}}
+            transition={{duration: 1.5}}>
+            RAY HO
+          </motion.h2>
+          <div className="typed">
+            <Typewriter
+              words={['','COMPUTER ENGINEERING STUDENT', 'SOFTWARE ENGINEER', 'BREAK DANCER', 'MR. WORLDWIDE']}
+              loop={Infinity}
+              deleteSpeed={50}
+              typeSpeed={50}
+              cursor={true}
+              cursorStyle='|'
+              cursorColor='crimson'
+            />
+          </div>
         </div>
-        </div>
-        <Link className='scroll' to="about" spy={true} smooth={true} offset={20} duration={700}>scroll down ↓</Link>
+        <motion.h5 
+            className='scroll-div'
+            initial={{opacity: 0, y: 150}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 1.5}}>
+            <Link className='scroll' to="about" spy={true} smooth={true} offset={20} duration={700}>scroll down ↓</Link>
+        </motion.h5>
       </div>
       <div className='about'>
-        <img src={ray}></img>
+        <motion.img src={ray}
+            initial={{opacity: 0, x: -150}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 1, delay: 0.5}}
+            viewport={{ once: true }}></motion.img>
         <div className='text'>
-          <h1>ABOUT</h1>
-          <div className="line">__________________________________________</div>
-          <h2>Hey there! My name is Ray Ho, I'm a third year Computer Engineering student studying at the University of British Columbia. So far, I've had the pleasure
+          <motion.h1 
+            className='about-title'
+            initial={{opacity: 0, x: 150}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 1}}
+            viewport={{ once: true }}
+          >ABOUT</motion.h1>
+          <motion.div 
+            className="line"
+            initial={{opacity: 0, x: 150}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 1, delay: 0.25}}
+            viewport={{ once: true }}>__________________________________________</motion.div>
+          <motion.h2
+            initial={{opacity: 0, x: 150}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 1, delay: 0.5}}
+            viewport={{ once: true }}>Hey there! My name is Ray Ho, I'm a third year Computer Engineering student studying at the University of British Columbia. So far, I've had the pleasure
             of working as a software developer with a <a href="https://www.cityu.edu.hk/">university based in Hong Kong</a>, and a <a href="https://github.com/BEARUBC">student-led engineering design team from UBC</a>.
-          </h2>
-          <h2 className="second">I'm currently a software engineer intern at <a href="https://www.alida.com/">Alida</a>.
+          </motion.h2>
+          <motion.h2 
+            className="second"
+            initial={{opacity: 0, x: 150}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 1, delay: 0.5}}
+            viewport={{ once: true }}>I'm currently a software engineer intern at <a href="https://www.alida.com/">Alida</a>.
           I'm open to any tech internship roles starting in Spring 2024 and Summer 2024!
-          </h2>
+          </motion.h2>
           <div className='technologies'>
-            <h2>Technologies</h2>
-            <div className="line-2">_______________</div>
-            <div className="list-container">
+            <motion.h2
+              initial={{opacity: 0, y: 50}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 1, delay: 0.75}}
+              viewport={{ once: true }}
+              >Technologies
+            </motion.h2>
+            <motion.div className="line-2"
+              initial={{opacity: 0, y: 75}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 1, delay: 0.75}}
+              viewport={{ once: true }}>_______________
+            </motion.div>
+            <motion.div className="list-container"
+              initial={{opacity: 0, y: 75}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 1, delay: 1}}
+              viewport={{ once: true }}>
               <div>
                 <img src={web}></img>
                 <h3>Web Dev</h3>
               </div>
-              <div>
+              <div> 
                 <img src={ts}></img>
                 <h3>TypeScript</h3>
               </div>
@@ -118,16 +207,28 @@ function App() {
                 <img src={mongo}></img>
                 <h3>MongoDB</h3>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
       <div className='experience'>
         <div className="experience-title">
-          <h1>EXPERIENCE</h1>
-          <div className='line-two'>__________________________________________________________</div>
+          <motion.h1
+            initial={{opacity: 0, x: 200}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 1, delay: 0.5}}
+            viewport={{ once: true }}>EXPERIENCE</motion.h1>
+          <motion.div className='line-two'
+            initial={{opacity: 0, x: 200}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 1}}
+            viewport={{ once: true }}>__________________________________________________________</motion.div>
         </div>
-        <div className='experience-container'>
+        <motion.div className='experience-container'
+          initial={{opacity: 0, x: -200}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 1, delay: 1}}
+          viewport={{ once: true }}>
           <div>
             <h4><a href="https://www.alida.com/">ALIDA</a></h4>
             <h2>Software Engineer Intern</h2>
@@ -152,15 +253,27 @@ function App() {
               delivering a product that exceeded my stakeholders' expectations.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className='projects'>
           <div className='projects-title'>
-            <h1>PROJECTS</h1>
-            <div className='line-three'>_____________________________</div>
+            <motion.h1
+              initial={{opacity: 0, x: 200}}
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 1, delay: 0.5}}
+              viewport={{ once: true }}>PROJECTS</motion.h1>
+            <motion.div className='line-three'
+              initial={{opacity: 0, x: 200}}
+              whileInView={{opacity: 1, x: 0}}
+              transition={{duration: 1}}
+              viewport={{ once: true }}>_____________________________</motion.div>
           </div>
           <div className='projects-container'>
-              <div className='row'>
+              <motion.div className='row'
+                initial={{opacity: 0, x: -200}}
+                whileInView={{opacity: 1, x: 0}}
+                transition={{duration: 1, delay: 0.75}}
+                viewport={{ once: true }}>
                   <div className='image-container' onClick={() => {window.open('https://github.com/Raywnh/Vehicle-Streaming-Platform')}}>
                     <h2 className='project-name'>SPASM.TV</h2>
                     <img className='image' src={spasm}>
@@ -173,8 +286,12 @@ function App() {
                     </img>
                     <p className='overlay'>An image guessing game powered by AI generated art built with OpenAI's DALL-E model</p>
                   </div>
-              </div>
-              <div className='row'>
+              </motion.div>
+              <motion.div className='row'
+                initial={{opacity: 0, x: 200}}
+                whileInView={{opacity: 1, x: 0}}
+                transition={{duration: 1, delay: 0.75}}
+                viewport={{ once: true }}>
                   <div className='image-container' onClick={() => {window.open('https://github.com/Raywnh/budgeting-app')}}>
                     <h2 className='project-name'>BUDGETING APP</h2>
                     <img className='image' src={budgetingApp}>
@@ -187,18 +304,30 @@ function App() {
                     </img>
                     <p className='overlay'>A simple dodging video game made with Unity that increases in difficulty as time goes on</p>
                   </div>
-              </div>
+              </motion.div>
           </div>
       </div>
       <div className='contact'>
-        <h1>CONTACT</h1>
-        <h2 className='line-four'>______________________________________</h2>
-          <ul>
+        <motion.h1
+            initial={{opacity: 0, y: -200}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 1, delay: 0.5}}
+            viewport={{ once: true }}>CONTACT</motion.h1>
+        <motion.h2 className='line-four'
+            initial={{opacity: 0, x: -200}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 1}}
+            viewport={{ once: true }}>______________________________________</motion.h2>
+          <motion.ul
+            initial={{opacity: 0, x: 200}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 1, delay: 0.75}}
+            viewport={{ once: true }}>
             <li><a href="https://www.linkedin.com/in/ray-ho-wnh/">LINKEDIN</a></li>
             <li><a href="https://github.com/Raywnh">GITHUB</a></li>
             <li><a href="mailto:rayhownh@gmail.com">EMAIL</a></li>
             <li><a href={resume} download>RESUME</a></li>
-          </ul>
+          </motion.ul>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@
     padding-top: 0vw;
     margin-top: -10vw;
     padding-bottom: 1vw;
+    margin-bottom: -10vw;
     font-family: Calluna, Arial, sans-serif;
     background-color: #7e9278;
     z-index: 9;
@@ -30,7 +31,7 @@
     margin-top: 4vw;
   }
   
-  .text h1 {
+  .about-title {
     background-color: transparent;
     font-size: 5vw;
     color: rgb(252, 242, 226);
@@ -118,6 +119,7 @@
     height:4vw;
     object-fit: scale-down;
     margin: 3vw;
+    background-color: white;
   }
 
   .list-container h3 {

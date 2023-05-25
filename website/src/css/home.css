@@ -14,12 +14,11 @@
     justify-content: center;
     padding-top: 11vw;
     font-family: monospace;
-    /* border: 1vw black solid; */
     width: 50%;
     
   }
 
-  .home-container:after {
+  .bottom-left{
     content: "";
     background: rgb(253, 129, 129);
     position: absolute;
@@ -77,6 +76,7 @@
     height: 5vw;
     text-align: center;
     margin-bottom: 0vw;
+    background-color: transparent;
   }
   
   .scroll {
@@ -95,4 +95,19 @@
     opacity: 75%;
     background-color: rgb(236, 173, 173);
     cursor: pointer;
+  }
+
+  .home-animation {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .scroll-div {
+    padding: 1vw;
+    margin-top: 12vw;
+    margin-bottom: 25vw;
+    color: rgb(255, 126, 126);
+    transition: all 0.3s ease-out;
   }
