@@ -14,10 +14,11 @@
   
   .about img {
     margin: 9vw;
-    margin-top: -7.5vw;
+    margin-top: -17vw;
     margin-right: 0vw;
     width: 25%;
     height: 23vw;
+    border-radius: 20%;
   }
 
   .text {
